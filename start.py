@@ -33,6 +33,9 @@ def whatDo():
     # writing all the punctuation marks by ourselves.
     do = do.translate(str.maketrans('','',string.punctuation))
 
+    # We also make all the string lowercase, so that "LooK" and "look" are treated as equal
+    do = do.lower()
+
     # Second, we split the user's phrase into a List of words, eliminating any whitespace
     do = do.split()
 
@@ -51,15 +54,13 @@ def whatDo():
     # we compose the path that brings us to the module that we want to use. Look at the filesystem!
     # TODO: I should write some words on how path are written 
     # (absolute and relative, moving through directories and selecting files) 
-    interaction = 'controllers.' + do
+    interaction = 'controllers.' + do[0]
     cont_loader = importlib.util.find_spec(interaction)
     if cont_loader is not None:
         importlib.import_module(interaction)
     else:
         print('Sorry, I didn\'t understand')
     
-    # print(do)
-
     # and then start over again!
     return whatDo()
 
