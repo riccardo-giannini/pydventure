@@ -1,1 +1,1 @@
-print('inside controllers folder')
+print('test controller')
