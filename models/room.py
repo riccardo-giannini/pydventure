@@ -20,6 +20,8 @@ class Room():
             pass
         pass
 
+        # TODO: same thing as with rooms, but with content
+
     # Each room is identified by a number, so it's easier to refer to it
     id = int
     # Each room has a name too, so that is human-readable. Easier to identify

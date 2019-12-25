@@ -1,8 +1,14 @@
 class Look:
     # command: tuple. It's a case of typing the parameter of a function.
     # This way we know that command should always be a tuple, if not, it should return an error.
-    def __init__(self, command:tuple):
+    def __init__(self, command:tuple, room):
         self.command = command
+
+        for cmd in command:
+            if (cmd in room.content):
+                import importlib
+                looking_at = importlib.import_module('models.onscene.' + cmd)
+                print(looking_at.look)
 
         # TODO
         # for itm in command:

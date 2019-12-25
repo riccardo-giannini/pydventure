@@ -1,7 +1,6 @@
 class User():
     import models.room
     room = models.room.Room(1)
-    exit()
     name = 'Little Red Riding Hood'
 
     def whoAmI(self):
@@ -81,8 +80,7 @@ class User():
             # we check if there's a class with the name we just got
             the_class = getattr(interaction,class_name)
             # we instantiate the object of class with the data input from user
-            the_class(do)
-            exit()
+            the_class(do, self.room)
         else:
             print('Sorry, I didn\'t understand')
 
