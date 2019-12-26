@@ -1,0 +1,1 @@
+look = 'Mom is calm. She looks at you.'

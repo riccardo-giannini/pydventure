@@ -4,11 +4,16 @@ class Look:
     def __init__(self, command:tuple, room):
         self.command = command
 
+        look_around = True
         for cmd in command:
             if (cmd in room.content):
                 import importlib
                 looking_at = importlib.import_module('models.onscene.' + cmd)
                 print(looking_at.look)
+                look_around = False
+
+        if look_around:
+            print(room.look_around)
 
         # TODO
         # for itm in command:

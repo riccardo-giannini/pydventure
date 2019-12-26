@@ -14,6 +14,7 @@ class Room():
             if id == room.id:
                 self.name = room.name
                 self.content = room.content
+                self.look_around = room.look_around
             else:
                 # TODO: print error
                 pass
@@ -30,3 +31,5 @@ class Room():
     # It's a set, so that it's unordered, like a list, but it cannot hold mulitple
     # copies of the same entity
     content = {}
+
+    look_around = str
