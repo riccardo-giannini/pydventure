@@ -1,5 +1,8 @@
 Test
 
+12/02/2020
+I had the temptation to remove the Pipfile and Pipfile.lock. I am currently working from my work's computer. They're actually absolutely necessary!
+
 24/12/2019
 I added the .gitignore precompiled file from Github. It is now correctly ignoring the \__pycache__ folders
 

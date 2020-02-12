@@ -1,3 +1,9 @@
+# This class is a model that istantiates a room based on its id
+# You instantiate the object, put the id in, and the init will parse the modules
+# looking for a room with that id.
+# An SQL DB would rather be much more efficient. I should implement that.
+
+# TODO: instantiate this class with data provided by SQL.
 class Room():
     def __init__(self, id:int):
         import os
