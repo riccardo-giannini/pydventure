@@ -37,7 +37,7 @@ class User():
         # we import the built in string object, that helps us manage strings in python
         import string
         # punctuation it's a property inside the string class that lists all the 
-        # punctuation marks in python. It is a useful built in that helps us in not
+        # punctuation marks in python. It is a useful built-in that helps us in not
         # writing all the punctuation marks by ourselves.
         do = do.translate(str.maketrans('','',string.punctuation))
 
@@ -65,8 +65,8 @@ class User():
 
         #getting the module
         interaction = 'controllers.interactions.' + do[0]
-        cont_loader = importlib.util.find_spec(interaction)
-        if cont_loader is not None:
+        controller_loader = importlib.util.find_spec(interaction)
+        if controller_loader is not None:
             interaction = importlib.import_module(interaction)
 
             # checking the class in the module. we should only write one class
