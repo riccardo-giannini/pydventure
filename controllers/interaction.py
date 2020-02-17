@@ -1,3 +1,5 @@
+# TODO: this should be a METACLASS producing the concrete classes ocnsisting of 
+# actions, like go, look, take, talk, use
 class Interaction():
     def __init__(self, command:tuple, room:object):
         for cmd in command:
